@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../css/calculator.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+	  <div class="main">
+		<h1 class="app-title" id="app-title">Mortgage Loan Calculator</h1>
+	  <div class="section-language">
+		<label>Language: 
+		<button id="select-language-btn">English</button>
+	  </div>
+	  <div class="main-content">
+		<form onsubmit="generateTable(); return false;" class="home-calculator-form" name="home_form">
+		  <div class="calculator-form-input">
+			<label for="home_price" class="calculator-form-input-label" id="home_price_label">Home Price</label>
+			<input type="text" name="home_price" id="home-price" value="585000" />
+		  </div>
+		  <div class="calculator-form-input">
+			<label for="apr" class="calculator-form-input-label" id="apr_label">APR (%)</label> 
+			<input type="text" name="apr" id="apr" value="3"/>
+		  </div>
+		  <div class="calculator-form-input">
+			<label for="down-payment" class="calculator-form-input-label" id="down_payment_label">Down Payment (%) </label>
+			<input type="text" name="down_payment" id="down-payment" value="20"/>
+		  </div>
+		  <div class="calculator-form-input">
+			<label for="down-payment" class="calculator-form-input-label radio" id="15_years_label">15 years </label>
+			<input type="radio" name="years" id="year-payment-15" class="year-input" value="15" />
+		  </div>
+		  <div class="calculator-form-input">
+			<label for="down-payment" class="calculator-form-input-label radio" id="30_years_label">30 years </label>
+			<input type="radio" name="years" id="year-payment-30" value ="30" class="year-input" checked>
+		  </div>
+		  <div>
+			<p id="other_expenses">Other Monthly Expenses</p>
+			<div class="calculator-form-input">
+			  <label for="utilities" class="calculator-form-input-label" id="utility_label">Utilities </label>
+			  <input type="text" name="utilities" id="utilities" value="100"/>
+			</div>
+			<div class="calculator-form-input">
+			  <label for="property_tax" class="calculator-form-input-label" id="property_tax_label">Property Tax</label>
+			  <input type="text" name="property_tax" id="property-tax" value="580"/>
+			</div>
+			<div class="calculator-form-input">
+			  <label for="home_insurance" class="calculator-form-input-label" id="home_insurance_label">Homeowner's insurance </label>
+			  <input type="text" name="home_insurance" id="home-insurance" value="100">
+			</div>
+			<div class="calculator-form-input">
+			  <label for="other_exp" class="calculator-form-input-label" id="miscellaneous_label">Miscellaneous</label>
+			  <input type="text" name="other_exp" id="other_exp" value="100">
+			</div>
+		  </div> 
+		  <div class="calculate_btn">    
+			<input type="submit" id="submit" value="calculate" name="calculate"/>
+		  </div>
+		</form>
+
+		<div class="loan-payment">
+		  <label class="payment" id="loan_payment_label">Loan Monthly Payment</label><span id="loan-monthly-payment">0</span>
+		</div>
+		<div class="total-payment">
+		  <label class="payment" id="total_payment_label">Total Monthly Payment </label> <span id="total-monthly-payment">0</span>
+		</div>
+		<button class="show-detail-btn" id="show_detail_label">Show Detail</button>
+		<div id="section-table" class="section-table">
+		</div>
+		
+	  </div>
+	  <footer></footer>
+	  </div>
+	  <script src="../js/calculator.js"></script>
+	</body>
+</html>
