@@ -3,6 +3,7 @@ let selectedLanguage = 0;
 let monthly_payment = 1973;
 const decimal_point = 2;
 let table_header = ["No", "Principal", "Balance"];
+let table_header_kh = ["No", "បំណុលដើមខែ", "បំណុលចុងខែ"];
 let duration = 30 * 12;
 
 let home_price;
@@ -25,8 +26,6 @@ let selected_lang_btn;
 let home_price_label;
 let apr_label;
 let down_payment_label;
-let fifteen_years_label;
-let thirty_years_label;
 let other_expenses_label;
 let utility_label;
 let property_tax_label;
@@ -35,6 +34,7 @@ let miscellaneous_label;
 let loan_payment_label;
 let total_monthly_payment_label;
 let show_detail_label;
+let paidoff_label;
 
 function generateTable(){
   clearTable();
@@ -148,16 +148,8 @@ function calTotalOtherExpenses(){
 }
 
 function calPaymentDuration(){
-  let radios = document.getElementsByName("years");
-  for (const year of radios){
-    if(year.checked){
-      if(year.value == "30"){
-        duration = 30 * 12;
-      }else{
-        duration = 15 * 12;
-      } 
-    }
-  }
+  let numOfYears = document.getElementById("paidoff");
+  duration = parseInt(numOfYears.value) * 12;
 }
 
 function calMonthlyPayment(){
@@ -171,7 +163,7 @@ function setLanguage(){
 
 function changeLanguage(){
   const kh_eng = {
-  "title": ["Mortgage Loan Calculator", "គិតលុយជំពាក់ទិញផ្ទះ"],
+  "title": ["Mortgage Calculator", "គិតបំណុលផ្ទះ"],
   "homeprice": ["Home Price", "តម្លៃផ្ទះ"],
   "language" : ["ខ្មែរ", "English"],
   "apr" : ["APR (%)", "អត្រា​ការ​ប្រាក់ (%)"],
@@ -186,15 +178,14 @@ function changeLanguage(){
   "loanMonPayment" : ["Loan Monthy Payment","បង់ប្រាក់កម្ចីប្រចាំខែ"],
   "totalMonPayment" : ["Total Monthly Payment","បង់សរុបប្រចាំខែ"],
    "detail_btn" : ["Show Detail", "បង្ហាញលម្អិត"],
-   "calculate_btn" : ["calculate", "គណនា"] 
+   "calculate_btn" : ["calculate", "គណនា"],
+    "paidoff" : ["Paid Off in Years", "ចំនួនឆ្នាំត្រូវបង់"]
 };
   app_title.innerHTML = kh_eng["title"][selectedLanguage];
   selected_lang_btn.innerHTML = kh_eng["language"][selectedLanguage];
   home_price_label.innerHTML = kh_eng["homeprice"][selectedLanguage];
   apr_label.innerHTML = kh_eng["apr"][selectedLanguage];
   down_payment_label.innerHTML = kh_eng["downpayment"][selectedLanguage];
-  fifteen_years_label.innerHTML = kh_eng["15yrs"][selectedLanguage];
-  thirty_years_label.innerHTML = kh_eng["30yrs"][selectedLanguage];
   other_expenses_label.innerHTML = kh_eng["otherMonExp"][selectedLanguage];
   utility_label.innerHTML = kh_eng["utility"][selectedLanguage];
   property_tax_label.innerHTML = kh_eng["propertyTax"][selectedLanguage];
@@ -204,6 +195,7 @@ function changeLanguage(){
   total_monthly_payment_label.innerHTML = kh_eng["totalMonPayment"][selectedLanguage];
   show_detail_label.innerHTML = kh_eng["detail_btn"][selectedLanguage];
   calculate_btn.value = kh_eng["calculate_btn"][selectedLanguage];
+  paidoff_label.innerHTML = kh_eng["paidoff"][selectedLanguage];
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -215,8 +207,6 @@ selected_lang_btn = document.getElementById("select-language-btn");
 home_price_label = document.getElementById("home_price_label");
 apr_label = document.getElementById("apr_label");
 down_payment_label = document.getElementById("down_payment_label");
-fifteen_years_label = document.getElementById("15_years_label");
-thirty_years_label = document.getElementById("30_years_label");
 other_expenses_label = document.getElementById("other_expenses");
 utility_label = document.getElementById("utility_label");
 property_tax_label = document.getElementById("property_tax_label");
@@ -226,5 +216,7 @@ loan_payment_label = document.getElementById("loan_payment_label");
 total_monthly_payment_label = document.getElementById("total_payment_label");
 show_detail_label = document.getElementById("show_detail_label");
 calculate_btn = document.getElementById("submit");
+paidoff_label = document.getElementById("paidoff_label");  
+  
  setLanguage();
 }, false);

@@ -25,7 +25,7 @@ form{
 
 .home-calculator-form,
 .section-language{
-  font-size: 24px;  
+  font-size: 22px;  
 }
 
 #select-language-btn{
@@ -50,11 +50,6 @@ input{
   padding-top: 10px;
   flex: 1 150px;
 }
-
-.calculator-form-input > .radio{
-  width: 480px;
-  padding-top: 4px;
-} 
 
 #other_expenses{
   text-align: center;
@@ -106,7 +101,7 @@ input{
 .payment,
 #loan-monthly-payment,
 #total-monthly-payment{
-  font-size: 24px;
+  font-size: 22px;
 }
 
 #loan-monthly-payment,
@@ -118,7 +113,7 @@ input{
 table{
   table-layout: auto;
   width: 100%;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
 }
 table,
@@ -136,7 +131,7 @@ footer{
 }
 
 .show-detail-btn{
-  font-size: 24px;
+  font-size: 22px;
   width: 25%;
   height: 35px;
   margin: 25px 0;

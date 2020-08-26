@@ -19,41 +19,37 @@
 		<form onsubmit="generateTable(); return false;" class="home-calculator-form" name="home_form">
 		  <div class="calculator-form-input">
 			<label for="home_price" class="calculator-form-input-label" id="home_price_label">Home Price</label>
-			<input type="number" name="home_price" id="home-price" placeholder="Enter price" required/>
+			<input type="number" name="home_price" id="home-price" placeholder="Enter price" min="0" required/>
 		  </div>
 		  <div class="calculator-form-input">
 			<label for="apr" class="calculator-form-input-label" id="apr_label">APR (%)</label> 
-			<input type="number" name="apr" id="apr" placeholder="Enter APR" required/>
+			<input type="number" name="apr" id="apr" placeholder="Enter APR" min="0" max="30" required/>
 		  </div>
 		  <div class="calculator-form-input">
 			<label for="down-payment" class="calculator-form-input-label" id="down_payment_label">Down Payment (%) </label>
-			<input type="number" name="down_payment" id="down-payment" placeholder="Enter down payment" required/>
+			<input type="number" name="down_payment" id="down-payment" placeholder="Enter down payment"  min="15" required/>
 		  </div>
 		  <div class="calculator-form-input">
-			<label for="down-payment" class="calculator-form-input-label radio" id="15_years_label">15 years </label>
-			<input type="radio" name="years" id="year-payment-15" class="year-input" value="15" />
-		  </div>
-		  <div class="calculator-form-input">
-			<label for="down-payment" class="calculator-form-input-label radio" id="30_years_label">30 years </label>
-			<input type="radio" name="years" id="year-payment-30" value ="30" class="year-input" checked>
+			<label for="paidoff" class="calculator-form-input-label" id="paidoff_label">Paid Off in Years</label>
+			<input type="number" name="paidoff" id="paidoff" min="1" max="30" value="30" required/>
 		  </div>
 		  <div>
 			<p id="other_expenses">Other Monthly Expenses</p>
 			<div class="calculator-form-input">
 			  <label for="utilities" class="calculator-form-input-label" id="utility_label">Utilities </label>
-			  <input type="number" name="utilities" id="utilities" value="0"/>
+			  <input type="number" name="utilities" id="utilities" value="0" min="0" required/>
 			</div>
 			<div class="calculator-form-input">
 			  <label for="property_tax" class="calculator-form-input-label" id="property_tax_label">Property Tax</label>
-			  <input type="number" name="property_tax" id="property-tax" value="0"/>
+			  <input type="number" name="property_tax" id="property-tax" value="0" min="0" required/>
 			</div>
 			<div class="calculator-form-input">
 			  <label for="home_insurance" class="calculator-form-input-label" id="home_insurance_label">Homeowner's insurance </label>
-			  <input type="number" name="home_insurance" id="home-insurance" value="0">
+			  <input type="number" name="home_insurance" id="home-insurance" value="0" min="0" required />
 			</div>
 			<div class="calculator-form-input">
 			  <label for="other_exp" class="calculator-form-input-label" id="miscellaneous_label">Miscellaneous</label>
-			  <input type="number" name="other_exp" id="other_exp" value="0">
+			  <input type="number" name="other_exp" id="other_exp" value="0" min="0" required/>
 			</div>
 		  </div> 
 		  <div class="calculate_btn">    
