@@ -163,7 +163,7 @@ function setLanguage(){
 
 function changeLanguage(){
   const kh_eng = {
-  "title": ["Mortgage Calculator", "គិតបំណុលផ្ទះ"],
+  "title": ["Mortgage Calculator", "ការគណនាប្រាក់កម្ចីទិញផ្ទះ"],
   "homeprice": ["Home Price", "តម្លៃផ្ទះ"],
   "language" : ["ខ្មែរ", "English"],
   "apr" : ["APR (%)", "អត្រា​ការ​ប្រាក់ (%)"],
