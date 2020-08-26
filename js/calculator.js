@@ -50,8 +50,6 @@ function generateTable(){
   setLoanMonthlyPayment();
   setTotalMonthlyPayment();
   
-  
-  
   var table = document.createElement("TABLE");
   var tbody = document.createElement("TBODY");
   
@@ -111,9 +109,9 @@ function setTableBody(tbody){
          if(j == 0){
            content = document.createTextNode(i);
          }else if(j == 1){
-           content = document.createTextNode(principal.toFixed(decimal_point));
+           content = document.createTextNode(Number(principal.toFixed(decimal_point)).toLocaleString('en'));
          }else if(j == 2){
-           content = document.createTextNode(balance.toFixed(decimal_point));
+           content = document.createTextNode(Number(balance.toFixed(decimal_point)).toLocaleString('en'));
          }
          
          tb_td.appendChild(content);
@@ -137,12 +135,12 @@ function calBalance(){
 
 function setLoanMonthlyPayment(){
   var loan_monthly_payment = document.getElementById("loan-monthly-payment");
-  loan_monthly_payment.innerHTML = monthly_payment.toFixed(decimal_point);
+  loan_monthly_payment.innerHTML = Number(monthly_payment.toFixed(decimal_point)).toLocaleString('en');
 }
 
 function setTotalMonthlyPayment(){
   var total_monthly_payment = document.getElementById("total-monthly-payment");
-  total_monthly_payment.innerHTML = (monthly_payment + total_other_expenses).toFixed(decimal_point);
+  total_monthly_payment.innerHTML = Number((monthly_payment + total_other_expenses).toFixed(decimal_point)).toLocaleString('en');
 }
 
 function calTotalOtherExpenses(){
@@ -185,7 +183,7 @@ function changeLanguage(){
   "propertyTax" : ["Property Tax", "ពន្ធផ្ទះ"],
   "homeInsurance" : ["Homeowner's Insurance", "ធានារ៉ាប់រងផ្ទះ"],
   "miscellaneous" : ["Miscellaneous", "ការចំណាយផ្សេងៗ"],
-  "loanMonPayment" : ["Loan Monthy Payment","បង់ប្រចាំខែ"],
+  "loanMonPayment" : ["Loan Monthy Payment","បង់ប្រាក់កម្ចីប្រចាំខែ"],
   "totalMonPayment" : ["Total Monthly Payment","បង់សរុបប្រចាំខែ"],
    "detail_btn" : ["Show Detail", "បង្ហាញលម្អិត"],
    "calculate_btn" : ["calculate", "គណនា"] 
