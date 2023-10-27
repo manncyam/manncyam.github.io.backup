@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message" hidden="true"></div>
+    <button onclick="edit(this)" id="edit" style="display:none">EDIT</button>
+    <form onsubmit="return show(event)" id="message-form">
+        <label for="name">Enter Text Message</label>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="SHOW">
+    </form>
+
+    <script src="display.js"></script>
+</body>
+</html>
