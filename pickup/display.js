@@ -1,3 +1,4 @@
+document.getElementById('heroe-div').hidden = true;
 function show(e){
     e.preventDefault();
     guest = document.getElementById('name');
@@ -11,7 +12,5 @@ function show(e){
 
 function edit(e){
     document.getElementById('heroe-div').hidden = true;
-
-    var message_form = document.getElementById('message-form');
-    message_form.hidden = false;
+    document.getElementById('message-form').hidden = false;
 }
