@@ -16,31 +16,31 @@ function edit(e){
     document.getElementById('message-form').hidden = false;
 }
 
-if ("wakeLock" in navigator) {
-    isSupported = true;
-    statusElem = document.getElementById('test-wakelock')
-    statusElem.textContent = "Screen Wake Lock API supported!";
-} else {
-    statusElem = document.getElementById('test-wakelock')
-    statusElem.textContent = "Wake lock is not supported by this browser.";
-}
+var statusElem = document.getElementById('test-wakelock');
+
+
 
 // Create a reference for the Wake Lock.
-// let wakeLock = null;
+(async () =>{
+    let wakeLock = null;
 
-// // create an async function to request a wake lock
-// try {
-//   wakeLock = await navigator.wakeLock.request("screen");
-// } catch (err) {
-//   // The Wake Lock request has failed - usually system related, such as battery.
-//   statusElem.textContent = `${err.name}, ${err.message}`;
-// }
+    // create an async function to request a wake lock
+    try {
+        wakeLock = await navigator.wakeLock.request("screen");
+        statusElem.textContent = "get Screen.";
+    } catch (err) {
+    // The Wake Lock request has failed - usually system related, such as battery.
+    statusElem.textContent = `${err.name}, ${err.message}`;
+    }
 
-// wakeLock.addEventListener("release", () => {
+    wakeLock.addEventListener("release", () => {
 
-// });
-// document.addEventListener("visibilitychange", async () => {
-//     if (wakeLock !== null && document.visibilityState === "visible") {
-//       wakeLock = await navigator.wakeLock.request("screen");
-//     }
-// });
+    });
+    document.addEventListener("visibilitychange", async () => {
+        if (wakeLock !== null && document.visibilityState === "visible") {
+            wakeLock = await navigator.wakeLock.request("screen");
+            statusElem.textContent = "try to get it.";
+        }
+    });
+    console.log("function called");
+})()
