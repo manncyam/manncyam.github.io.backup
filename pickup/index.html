@@ -9,16 +9,15 @@
 <body>
     <div class="px-4 py-5 my-5 text-center" id="heroe-div">
         <div class="col-lg-6 mx-auto">
-            <h1 ondblclick="edit(this)" id="edit">EDIT</h1>
-            <!-- <button type="button" class="btn btn-outline-primary btn-lg px-4" ondblclick="edit(this)" id="edit">EDIT</button> -->
+            <h1 ondblclick="edit(this)" id="edit" style="font-weight:bold;">EDIT</h1>
         </div>
     </div>
 
     <div class="px-4 py-5 my-5 text-center container">
         <form class="mx-5" onsubmit="return show(event)" id="message-form">
             <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Enter Text Message</label>
-            <input type="text" class="form-control" id="name">
+            <label for="name" class="form-label">Enter Text Message</label>
+            <input type="text" class="form-control" id="name" name="name">
             </div>
             <button type="submit" class="btn btn-primary">SHOW</button>
         </form>
