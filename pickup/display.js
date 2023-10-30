@@ -1,18 +1,18 @@
 
 document.getElementById('heroe-div').hidden = true;
 var noSleep = new NoSleep();
+var message = document.getElementById('edit');
 
 function show(e){
     e.preventDefault();
     guest = document.getElementById('name');
     document.getElementById('heroe-div').hidden = false;
-    message = document.getElementById('edit');
     message.innerHTML = guest.value;
 
     if (document.getElementById('is_neon').checked){
         message.classList.add("neon")
     }
-    
+
     document.getElementById('message-form').hidden = true;
     
     noSleep.enable();
