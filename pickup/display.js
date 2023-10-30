@@ -9,6 +9,10 @@ function show(e){
     message = document.getElementById('edit');
     message.innerHTML = guest.value;
 
+    if (document.getElementById('is_neon').checked){
+        message.classList.add("neon")
+    }
+    
     document.getElementById('message-form').hidden = true;
     
     noSleep.enable();
@@ -19,4 +23,6 @@ function edit(e){
     document.getElementById('heroe-div').hidden = true;
     document.getElementById('message-form').hidden = false;
     noSleep.disable();
+
+    message.classList.remove("neon")
 }

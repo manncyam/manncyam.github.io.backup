@@ -9,11 +9,7 @@
     <!-- https://www.tiny.cloud/blog/neon-fonts-and-glowing-text-get-started-in-two-steps/ -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-        h1 {
-            text-align: center;
-            font-family: 'Lobster';
-            font-size: 80px;
-            color: #fff;
+        .neon {
             text-shadow: 
                 0 0 5px #fff,
                 0 0 10px #fff,
@@ -22,6 +18,12 @@
                 0 0 25px #0073e6,
                 0 0 30px #0073e6,
                 0 0 35px #0073e6;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Lobster';
+            font-size: 80px;
+            color: #fff;
         }
         .full-height{
             min-height: 100vh;
@@ -32,11 +34,15 @@
     <div class="container">
         <div class="row align-items-center text-center full-height">
             <div class="mx-auto" id="heroe-div">
-                <h1 ondblclick="edit(this)" id="edit">EDIT</h1>
+                <h1 ondblclick="edit(this)" id="edit">NAME</h1>
             </div>
             <form class="mx-0" onsubmit="return show(event)" id="message-form">
                 <div class="mb-3">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Text Message" required>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Text Message" autocomplete="Your Name" required>
+                </div>
+                <div class="mb-3 form=check">
+                    <input class="form-check-input" type="checkbox" id="is_neon" name="neon-text" value="">
+                    <label class="form-check-label text-white" for="is_neon">Neon Display</label>
                 </div>
                 <button type="submit" class="btn btn-primary">SHOW</button>
             </form>
