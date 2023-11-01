@@ -22,24 +22,29 @@
         .band-name{
             font-style: italic;
             color: #fff;
-            background-color: #427D9D;
+            background-color: rgb(3, 152, 221);
             padding-top: 5px;
             padding-bottom: 5px;
             padding-left: 15px;
             padding-right: 15px;
         }
         .generate-button{
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             padding-left: 15px;
             padding-right: 15px;
             font-size: 16px;
+            letter-spacing: 0.25rem;
             color:#fff;
             background-color: rgb(3, 152, 221);
             border-width: 0px;
         }
         h1{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input{
+            padding: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -48,11 +53,11 @@
         <h1>Welcome to the Band Name Generator</h1>
         <form onsubmit="return generate()">
             <div class="space-below">
-                <label class="space-below" for="city">What's name of the city you grew up in?</label><br><br>
+                <label class="space-below" for="city">What's name of the city you grew up in?</label><br>
                 <input type="text" name="city" id="city" placeholder="Enter City" size="30" required>
             </div>
             <div class="space-below">
-                <label for="pet-name">What's your pet's name?</label><br><br>
+                <label for="pet-name">What's your pet's name?</label><br>
                 <input type="text" name="pet-name" id="pet-name" placeholder="Enter Your Pet's name" size="30" required>
             </div>
             <input class="generate-button" type="submit" value="GENERATE">
