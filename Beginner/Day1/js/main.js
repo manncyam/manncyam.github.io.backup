@@ -1,8 +1,10 @@
+const city = document.getElementById('city');
+city.focus();
+const pet_name = document.getElementById('pet-name');
+const band_name = document.getElementById('band-name');
+
 function generate() {
-    let city = document.getElementById('city');
-    let pet_name = document.getElementById('pet-name');
-    let band_name = document.getElementById('band-name');
-    
+        
     if (city.value === '' || pet_name.value === ''){
         return false;
     }
@@ -13,6 +15,6 @@ function generate() {
 
     band_name.textContent = `${city.value}  ${pet_name.value}`;
 
-    console.log(band_name.parentElement.classList);
+    city.focus();
     return false;
 }
