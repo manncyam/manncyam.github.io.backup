@@ -1,0 +1,33 @@
+{
+    "nodes": [
+      {"id": "Parts of Speech", "group": 1},
+      {"id": "Nouns", "group": 2},
+      {"id": "Adjectives", "group": 2},
+      {"id": "Pronouns", "group": 2},
+      {"id": "Verbs", "group": 2},
+      {"id": "Adverbs", "group": 2},
+      {"id": "Conjunctions", "group": 2},
+      {"id": "Prepositions", "group": 2},
+      {"id": "Articles", "group": 2},
+      {"id": "Common Nouns", "group": 3},
+      {"id": "Proper Nouns", "group": 3},
+      {"id": "Concrete Nouns", "group": 4},
+      {"id": "Abstract Nouns", "group": 4},
+      {"id": "Collective Nouns", "group": 4}
+    ],
+    "links": [
+      {"source": "Parts of Speech", "target": "Nouns", "value": 1},
+      {"source": "Parts of Speech", "target": "Pronouns", "value": 2},
+      {"source": "Parts of Speech", "target": "Adjectives", "value": 7},
+      {"source": "Parts of Speech", "target": "Verbs", "value": 3},
+      {"source": "Parts of Speech", "target": "Adverbs", "value": 3},
+      {"source": "Parts of Speech", "target": "Conjunctions", "value": 3},
+      {"source": "Parts of Speech", "target": "Prepositions", "value": 3},
+      {"source": "Parts of Speech", "target": "Articles", "value": 3},
+      {"source": "Nouns", "target": "Common Nouns", "value": 6},
+      {"source": "Nouns", "target": "Proper Nouns", "value": 18},
+      {"source": "Common Nouns", "target": "Abstract Nouns", "value": 13},
+      {"source": "Common Nouns", "target": "Concrete Nouns", "value": 18},
+      {"source": "Common Nouns", "target": "Collective Nouns", "value": 18} 
+    ]
+  }

@@ -1,0 +1,20 @@
+body{
+    background-color: aqua;
+    padding: 0px;
+    border: 2px;
+    border-color: red;
+}
+
+.content {
+    background-color: aquamarine;
+    text-align: center;
+    border-color: black;
+    height: 100vh;
+}
+
+.test {
+    background-color: whitesmoke;
+    text-align: center;
+    border-color: black;
+    height: 100vh;
+}
